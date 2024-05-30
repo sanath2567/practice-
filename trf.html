@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function fun(){
+             var demo=document.getElementById("dem");
+             demo.style.display="block";
+             demo.style.fontSize="30px"
+        }
+    </script>
+    <p style="display: none;" id="dem">Gridd</p>
+    <button ondblclick="fun()">click me</button> -->
+    <script>
+    var cost=0;
+    var count=true;
+    while(count){
+        let items=prompt("Enter the item");
+        let quan=prompt("enter the qunatity");
+
+        let quanfloat=parseFloat(quan);
+       
+        if(isNaN(quanfloat)||quanfloat<0){
+          alert("enter a valid number")
+
+        }
+        else{
+            cost=cost+quanfloat;
+        }
+
+        count=confirm("do you wanted to continue");
+
+    }
+    document.write(cost);
+    </script>
+
+</body>
+</html>

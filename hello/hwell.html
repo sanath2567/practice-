@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function calculateTotal() {
+    let totalAmount = 0;
+    let moreItems = true;
+
+   
+    while (moreItems) {
+       
+        let itemName = prompt("Enter the item name (or leave blank to skip):");
+
+       
+        let itemPrice = prompt("Enter the price of the item:");
+
+       
+        let itemPriceFloat = parseFloat(itemPrice);
+
+        
+        if (isNaN(itemPriceFloat) || itemPriceFloat < 0) {
+            alert("Please enter a valid positive number for the price.");
+        } else {
+       
+            totalAmount += itemPriceFloat;
+        }
+
+       
+        moreItems = confirm("Do you want to add another item?");
+    }
+
+   
+    document.write("<h1>The total amount of all items is: gee</h1> "+ totalAmount.toFixed(2));
+}
+
+calculateTotal();
+
+    </script>
+</body>
+</html>
